@@ -841,11 +841,11 @@ menuitem {
 }  
   
 /*Window Control styling*/
-@media not (-moz-pref: "arc-style-window-buttons-disabled") {
+@media not (-moz-pref("arc-style-window-buttons-disabled")) {
   .titlebar-button {
     font-size: 0 !important;
 }
-    @media not (-moz-pref: "zen.view.experimental-no-window-controls") {
+    @media not (-moz-pref("zen.view.experimental-no-window-controls")) {
         .titlebar-button {
             min-height: 13px !important;
             min-width: 13px !important;
@@ -930,9 +930,9 @@ menuitem {
 }
 
 
-@media not (-moz-pref: "arc-style-window-buttons-disabled") {
-  @media not (-moz-pref: "zen.view.experimental-no-window-controls") {
-    @media (-moz-pref: "zen.view.experimental-force-window-controls-left") {
+@media not (-moz-pref("arc-style-window-buttons-disabled")) {
+  @media not (-moz-pref("zen.view.experimental-no-window-controls")) {
+    @media (-moz-pref("zen.view.experimental-force-window-controls-left")) {
       .titlebar-buttonbox-container {
         order: 0 !important;
       }
