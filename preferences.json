@@ -123,7 +123,7 @@
     {
         "type": "checkbox",
         "property": "arc-nogaps-mod",
-        "label": "EXPERIMENTAL: Marginless for all modes; may break compact sidebar blur."
+        "label": "Marginless for all modes; may break compact sidebar blur."
     },
     {
         "type": "checkbox",
@@ -328,6 +328,7 @@
         ]
     }
 ]
+
 
 
 
