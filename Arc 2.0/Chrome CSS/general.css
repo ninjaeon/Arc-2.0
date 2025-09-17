@@ -44,7 +44,7 @@
   
   @media (-moz-pref("arc-nogaps-mod")) {
     :root{
-      --zen-webview-border-radius:0;
+/*       --zen-webview-border-radius:0; */
     }
     [zen-single-toolbar="true"] {
       #zen-appcontent-wrapper {
@@ -75,7 +75,7 @@
   
   @media (-moz-pref("arc-nogaps-compact-mod")) {
     :root[zen-compact-mode="true"]:not([customizing]) {
-      --zen-webview-border-radius:0;
+/*       --zen-webview-border-radius:0; */
         #zen-appcontent-wrapper:not(:has(#tabbrowser-tabpanels[zen-split-view]), :has(#zen-sidebar-web-panel:not([hidden]):not([pinned]))) {
             margin: 0 !important;
   
