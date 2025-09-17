@@ -42,7 +42,7 @@
   
   /* ---------------------- NOGAPS MOD ------------------------ */
   
-  @media (-moz-pref("arc-nogaps-mod")) {
+  @media  -moz-pref("arc-marginless-mod", 2)  {
     :root{
 /*       --zen-webview-border-radius:0; */
     }
@@ -73,7 +73,7 @@
   
   /* ----------------- NOGAPS COMPACT MOD ----------------- */
   
-  @media (-moz-pref("arc-nogaps-compact-mod")) {
+  @media -moz-pref("arc-marginless-mod", 1) {
     :root[zen-compact-mode="true"]:not([customizing]) {
 /*       --zen-webview-border-radius:0; */
         #zen-appcontent-wrapper:not(:has(#tabbrowser-tabpanels[zen-split-view]), :has(#zen-sidebar-web-panel:not([hidden]):not([pinned]))) {
