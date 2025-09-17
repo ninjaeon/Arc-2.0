@@ -116,6 +116,23 @@
         ]
     },
     {
+        "type":"dropdown",
+        "value":"number",
+        "property":"arc-marginless-mod",
+        "label": "Marginless browser"
+        "default": 1
+        "options":[
+            {
+                "label": "Only for compact mode.",
+                "value": 1
+            },
+            {
+                "label": "Both non-compact and compact mode",
+                "value": 2
+            }
+        ]
+    },
+    {
         "type": "checkbox",
         "property": "arc-nogaps-compact-mod",
         "label": "Marginless only for compact mode."
@@ -328,6 +345,7 @@
         ]
     }
 ]
+
 
 
 
