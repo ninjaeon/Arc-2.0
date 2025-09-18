@@ -119,8 +119,8 @@
         "type":"dropdown",
         "value":"number",
         "property":"arc-marginless-mod",
-        "label": "Marginless browser"
-        "default": 1
+        "label": "Marginless browser",
+        "default": 1,
         "options":[
             {
                 "label": "Only for compact mode.",
@@ -345,6 +345,7 @@
         ]
     }
 ]
+
 
 
 
