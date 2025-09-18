@@ -120,8 +120,12 @@
         "value":"number",
         "property":"arc-marginless-mod",
         "label": "Marginless browser",
-        "default": 1,
+        "default": 0,
         "options":[
+            {
+                "label": "None",
+                "value": 0
+            },
             {
                 "label": "Only for compact mode.",
                 "value": 1
@@ -131,16 +135,6 @@
                 "value": 2
             }
         ]
-    },
-    {
-        "type": "checkbox",
-        "property": "arc-nogaps-compact-mod",
-        "label": "Marginless only for compact mode."
-    },
-    {
-        "type": "checkbox",
-        "property": "arc-nogaps-mod",
-        "label": "Marginless for all modes; may break compact sidebar blur."
     },
     {
         "type": "checkbox",
@@ -345,6 +339,7 @@
         ]
     }
 ]
+
 
 
 
