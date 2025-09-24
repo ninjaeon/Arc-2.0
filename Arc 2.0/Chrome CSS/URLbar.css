@@ -124,7 +124,7 @@
 }
 
 /* When URL bar is open - smooth visual effect */
-#urlbar[open] #urlbar-background {
+#urlbar[open] .urlbar-background {
     border-radius: 15px !important;
     background: light-dark(rgba(255, 255, 255, 0.6), rgba(36, 36, 36, 0.3)) !important;
     backdrop-filter: blur(32px) brightness(0.4) saturate(3.5) !important;
