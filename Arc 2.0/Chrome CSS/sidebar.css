@@ -69,9 +69,9 @@ html,
   body:has([zen-compact-mode="true"]) #titlebar {
     padding: 8px !important;
     border-radius: 11px !important;
-    scale: 1 !important;
+    /* scale: 1 !important; */
     background: light-dark(rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0.4)) !important;
-    backdrop-filter: blur(32px) saturate(140%) !important;
+    /* backdrop-filter: blur(32px) saturate(140%) !important; */
   }
   
   /* Pseudo background overlay */
