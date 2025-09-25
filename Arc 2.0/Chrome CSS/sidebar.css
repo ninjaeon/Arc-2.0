@@ -509,7 +509,7 @@ More actions
       width: 71.5%;
   }
             
-  findbar:not([hidden="true"]) {
+  findbar:not[hidden="true"] {
       visibility: visible !important;
       animation: findbar-show-animation 0.3s ease-out forwards !important;
   }
