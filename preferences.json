@@ -259,6 +259,13 @@
         ]
     },
     {
+        "type": "string",
+        "label": "Blur for compact mode sidebar (e.g., 30px, 10px, etc.)",
+        "property": "arc.compact.sidebar-blur",
+        "defaultValue":"30px",
+        "placeholder":"30px"
+    },
+    {
         "type": "checkbox",
         "property": "arc-compact-mode-no-sidebar-bg",
         "label": "Remove pseudo background on compact sidebar. Enable if you don't use transparent sites."
@@ -339,6 +346,7 @@
         ]
     }
 ]
+
 
 
 
