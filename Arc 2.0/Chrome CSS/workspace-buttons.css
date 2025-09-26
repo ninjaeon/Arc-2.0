@@ -4,7 +4,6 @@ width: auto !important;
 max-width: none !important;
 min-width: 26px !important; }
 
-/*Credit: JustAdumbPrson*/
 @-moz-document url-prefix("chrome:") {
   /* ------------------------------ Workspace Button Styles ------------------------------ */
   
