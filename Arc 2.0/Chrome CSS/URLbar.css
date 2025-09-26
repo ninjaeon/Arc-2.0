@@ -21,7 +21,7 @@
 
 /* Basic performance optimization */
 #urlbar,
-#urlbar-background,
+.urlbar-background,
 #urlbar-input-container {
     will-change: transform, opacity;
     transform: translateZ(0);
@@ -32,7 +32,7 @@
 #urlbar[focused="true"] {
     transform: scale(1.02);
     background: rgba(255, 255, 255, 0.15);
-    /* border: 1px solid rgba(255, 255, 255, 0.3); */
+    border: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
@@ -40,15 +40,16 @@
 /* Clean hover effect */
 #urlbar:hover:not([focused="true"]) {
     background: rgba(255, 255, 255, 0.1);
-    /* border: 1px solid rgba(255, 255, 255, 0.2); */
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
+
 
 /* Smooth dropdown appearance */
 #urlbar-results {
     animation: fadeIn 0.2s ease;
     /* background: rgba(0, 0, 0, 0.9); */
     border-radius: 8px;
-    /* border: 1px solid rgba(255, 255, 255, 0.1); */
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 @keyframes fadeIn {
@@ -276,7 +277,7 @@ browser, .browserSidebarContainer.deck-selected {
 }
 
 /* Reload URLbar animation */
-#urlbar-background {
+.urlbar-background {
   --fadein-duration: var(--reload-urlbar-animation-duration, 0.5s);
   --animation-duration: var(--reload-urlbar-animation-fadein-duration, 1s);
 }
@@ -631,7 +632,7 @@ browser, .browserSidebarContainer.deck-selected {
   
     }}
   
- #urlbar-background {
+ .urlbar-background {
         background: rgba(105, 100, 110, 0.000000000000000000000000023) !important; /* Transparency fine-tuned */
      
     box-shadow: 8px 5px 125px 0 rgba(0, 0, 0, 0.5), 0px  30px 50px #00000069 !important;
