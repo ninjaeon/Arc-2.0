@@ -7,7 +7,7 @@ min-width: 26px !important; }
 @-moz-document url-prefix("chrome:") {
   /* ------------------------------ Workspace Button Styles ------------------------------ */
   
-  /* make workspace indicator have nebula theme background on hover */
+  /* make workspace indicator have arc theme background on hover */
   .zen-current-workspace-indicator::before {
     box-shadow: 0 0px 8px transparent !important;
     border-radius: var(--nebula-border-radius) !important;
