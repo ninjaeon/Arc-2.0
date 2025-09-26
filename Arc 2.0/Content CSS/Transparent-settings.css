@@ -1,25 +1,45 @@
-
-@-moz-document regexp("^(?!chrome:).*") {
-@-moz-document domain(monkeytype.com) {
-    body {
-      background-color: rgba(15, 15, 20, 0.4) !important; /* Darker base color */
-    }
-  }
-
-  :root{
+:root{
   --zen-colors-tertiary: transparent !important;
   --zen-settings-secondary-background: transparent !important;
 }
 
-groupbox:not(#sineInstallationGroup:popover-open){
+#preferences-root{
+  background-color: transparent !important;
+}
+
+.KEYJUMP_hint{
+  border-radius: 100px !important;
+  background-color: #49FCBB !important;
+  color: #000 !important;
+  font-family: 'Product Sans', Sans !important;
+  font-weight: bold !important;
+  box-shadow: #0008 0 0 10px !important;
+  border: #0008 1px solid !important;
+  transition: all 0.3s ease-in-out !important;
+}
+
+@-moz-document url(about:config){
+  html, #toolbar{
+    background-color: transparent !important;
+  }
+  tr, table{
+    background-color: transparent !important;
+    border: none !important;
+  }
+  tr{
+    outline: solid 1px #88888822 !important;
+  }
+}
+
+groupbox{
 /*   background: var(--zen-colors-tertiary) !important; */
   background: var(--zen-colors-border-contrast) !important;
-  border: none
+  border: none;
 }
 
 @-moz-document url(about:home), url(about:newtab), url(about:privatebrowsing) {
   body, .App{
-    background-color: #00000070 !important;
+    background-color: #00000000 !important;
   }
 
   .top-sites-list, .personalizeButtonWrapper{
@@ -32,6 +52,21 @@ groupbox:not(#sineInstallationGroup:popover-open){
   }
   
   .App > div:nth-child(2), .wallpaper{
+    display: none !important;
+  }
+  
+/*  no private hint  */
+  .info-border > .info{
+    display: none !important;
+  }
+  
+/*  rounded search  */
+  #search-handoff-button{
+    border-radius: 2em !important;
+  }
+  
+/*  no zen text  */
+  .wordmark{
     display: none !important;
   }
 }
@@ -56,13 +91,11 @@ footer{
 }
 }
 
-@-moz-document url(about:config){
-  tr, table{
-    background-color: transparent !important;
-    border: none !important;
-  }
-  tr{
-    outline: solid 1px #88888822 !important;
-  }
-}  
-}
+
+ /* transparency */
+/* .pdfViewer, body:has(.pdfViewer){
+  background-color: transparent !important;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+} */
