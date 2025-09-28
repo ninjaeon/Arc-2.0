@@ -114,11 +114,17 @@ html,
     }
 
     /* Sidebar on right */
-    :root[zen-right-side="true"] body:has([zen-compact-mode="true"]) #titlebar {
+    :root[zen-right-side="true"] body:has([zen-compact-mode="true"]) #browser::after {
       left: auto !important;
-      right: calc(var(--zen-element-separation) / 0.9) !important;
+      right: calc(var(--zen-element-separation) / 0.65) !important;
     }
 
+    /* New: If the built-in sidebar (#sidebar-box) is visible (e.g., an extension opened a sidebar),
+       keep the pseudo background visible in compact mode regardless of hover/state. */
+    html:has(#sidebar-box:not([hidden])) body:has([zen-compact-mode="true"]) #browser::after {
+      opacity: 1 !important;
+    }
+  }
     /* Show pseudo background when active/hovered */
     body:has([zen-compact-mode="true"] [zen-user-show=""],
       [zen-compact-mode="true"] #navigator-toolbox[zen-has-hover="true"]) #browser::after {
@@ -640,20 +646,11 @@ findbar toolbarbutton:active {
 }
 }
 
-/* -------------------------- FIX: Second sidebar transparency (#59) -------------------------- */
+/* -------------------------- DEBUG: Compact sidebar background trace (#59) -------------------------- */
 @-moz-document url-prefix("chrome:") {
-  /* When a second sidebar (built-in or web panel) is visible, force-apply the compact background.
-     Placed at end of file to win over earlier compact "background: none" rules. */
-  html:has(#sidebar-box:not([hidden]), #zen-sidebar-web-panel:not([hidden])) body:has([zen-compact-mode="true"]) #titlebar {
-    background: light-dark(rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0.4)) !important;
-    backdrop-filter: blur(var(--arc-compact-sidebar-blur)) saturate(140%) !important;
-    border-radius: 11px !important;
-    padding: 8px !important;
-  }
-
-  /* Optional debug: outline the compact background when the fix is active */
+  /* Optional debug: outline the compact background when a second sidebar is visible */
   @media (-moz-pref("arc-compact-debug")) {
-    html:has(#sidebar-box:not([hidden]), #zen-sidebar-web-panel:not([hidden])) body:has([zen-compact-mode="true"]) #titlebar {
+    html:has(#sidebar-box:not([hidden])) body:has([zen-compact-mode="true"]) #titlebar {
       outline: 2px dashed magenta !important;
       outline-offset: -2px !important;
     }
