@@ -82,7 +82,7 @@ html,
     left: 0;
     width: 100%;
     height: 100%;
-    backdrop-filter: blur(var(--arc-compact-sidebar-blur, 30px)) !important;
+    backdrop-filter: blur(var(--arc-compact-sidebar-blur)) !important;
     /* Apply backdrop-filter here */
     z-index: -1;
     /* Place it behind the parent's content */
@@ -220,6 +220,12 @@ html,
   }
 
   @media (-moz-pref("zen.view.compact.hide-toolbar")) {
+    html[zen-sidebar-expanded="true"]:not([zen-single-toolbar="true"]) body:has([zen-compact-mode="true"]) #titlebar {
+      background: none !important;
+      padding: 0 !important;
+      border-radius: 0 !important;
+      backdrop-filter: none !important;
+    }
 
     html[zen-sidebar-expanded="true"]:not([zen-single-toolbar="true"]):root[zen-right-side="true"] body:has([zen-compact-mode="true"]) #titlebar {
       left: auto !important;
@@ -293,6 +299,12 @@ html,
   }
 
   @media (-moz-pref("zen.view.compact.hide-toolbar")) {
+    html:not([zen-sidebar-expanded="true"]):not([zen-single-toolbar="true"]) body:has([zen-compact-mode="true"]) #titlebar {
+      background: none !important;
+      padding: 0 !important;
+      border-radius: 0 !important;
+      backdrop-filter: none !important;
+    }
 
     html:not([zen-sidebar-expanded="true"]):not([zen-single-toolbar="true"]):root[zen-right-side="true"] body:has([zen-compact-mode="true"]) #titlebar {
       left: auto !important;
@@ -626,4 +638,24 @@ findbar toolbarbutton:active {
 #viewButton:active {
   background-color: rgba(255, 255, 255, 0.1) !important;
 }
+}
+
+/* -------------------------- FIX: Second sidebar transparency (#59) -------------------------- */
+@-moz-document url-prefix("chrome:") {
+  /* When a second sidebar (built-in or web panel) is visible, force-apply the compact background.
+     Placed at end of file to win over earlier compact "background: none" rules. */
+  html:has(#sidebar-box:not([hidden]), #zen-sidebar-web-panel:not([hidden])) body:has([zen-compact-mode="true"]) #titlebar {
+    background: light-dark(rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0.4)) !important;
+    backdrop-filter: blur(var(--arc-compact-sidebar-blur)) saturate(140%) !important;
+    border-radius: 11px !important;
+    padding: 8px !important;
+  }
+
+  /* Optional debug: outline the compact background when the fix is active */
+  @media (-moz-pref("arc-compact-debug")) {
+    html:has(#sidebar-box:not([hidden]), #zen-sidebar-web-panel:not([hidden])) body:has([zen-compact-mode="true"]) #titlebar {
+      outline: 2px dashed magenta !important;
+      outline-offset: -2px !important;
+    }
+  }
 }

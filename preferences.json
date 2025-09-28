@@ -352,6 +352,11 @@
                 "value": "SF-Symbols"
             }
         ]
+    },
+    {
+        "type": "checkbox",
+        "property": "arc-compact-debug",
+        "label": "DEBUG: Highlight compact sidebar background fix (magenta outline)."
     }
 ]
 
