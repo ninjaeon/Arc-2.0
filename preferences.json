@@ -45,7 +45,27 @@
         "label": "Enable Tab Groups",
         "property": "browser.tabs.groups.enabled"
 
-    },    
+    }, 
+    {
+        "type": "dropdown",
+        "value": "number",
+        "property": "arc.tab-groups-disable",
+        "label": "Arc Tab Groups",
+        "default": 0,
+        "options": [
+            {
+                "label": "Enabled",
+                "value": 0
+            },
+            {
+                "label": "Disabled",
+                "value": 1
+            }
+        ]
+    },
+    {
+        "type":"separator"
+    },
     {
         "type": "checkbox",
         "property": "arc.urlbar.background",
@@ -153,26 +173,7 @@
         "property": "arc-pinned-extensions-badge",
         "label": "Enable badge/text on pinned extensions for related info, if any."
     },
-    {
-        "type": "dropdown",
-        "value": "number",
-        "property": "arc.tab-groups-disable",
-        "label": "Arc Tab Groups",
-        "default": 0,
-        "options": [
-            {
-                "label": "Enabled",
-                "value": 0
-            },
-            {
-                "label": "Disabled",
-                "value": 1
-            }
-        ]
-    },
-    {
-        "type":"separator"
-    },
+    
     {
         "type": "checkbox",
         "property": "arc-menu-animations",
@@ -353,6 +354,7 @@
         ]
     }
 ]
+
 
 
 
