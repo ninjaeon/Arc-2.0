@@ -82,7 +82,7 @@ html,
     left: 0;
     width: 100%;
     height: 100%;
-    backdrop-filter: blur(var(--arc-compact-sidebar-blur)) !important;
+    backdrop-filter: blur(var(--arc-compact-sidebar-blur, 30px)) !important;
     /* Apply backdrop-filter here */
     z-index: -1;
     /* Place it behind the parent's content */
@@ -220,12 +220,6 @@ html,
   }
 
   @media (-moz-pref("zen.view.compact.hide-toolbar")) {
-    html[zen-sidebar-expanded="true"]:not([zen-single-toolbar="true"]) body:has([zen-compact-mode="true"]) #titlebar {
-      background: none !important;
-      padding: 0 !important;
-      border-radius: 0 !important;
-      backdrop-filter: none !important;
-    }
 
     html[zen-sidebar-expanded="true"]:not([zen-single-toolbar="true"]):root[zen-right-side="true"] body:has([zen-compact-mode="true"]) #titlebar {
       left: auto !important;
@@ -299,12 +293,6 @@ html,
   }
 
   @media (-moz-pref("zen.view.compact.hide-toolbar")) {
-    html:not([zen-sidebar-expanded="true"]):not([zen-single-toolbar="true"]) body:has([zen-compact-mode="true"]) #titlebar {
-      background: none !important;
-      padding: 0 !important;
-      border-radius: 0 !important;
-      backdrop-filter: none !important;
-    }
 
     html:not([zen-sidebar-expanded="true"]):not([zen-single-toolbar="true"]):root[zen-right-side="true"] body:has([zen-compact-mode="true"]) #titlebar {
       left: auto !important;
