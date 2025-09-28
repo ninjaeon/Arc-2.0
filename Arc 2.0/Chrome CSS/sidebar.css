@@ -488,7 +488,7 @@ html,
 
 
 /* -------------------------- FINDBAR -------------------------- */
-
+@media not -moz-pref("arc-findbar-disable") {
 @keyframes findbar-show-animation {
   from {
     opacity: 0;
@@ -602,7 +602,7 @@ findbar toolbarbutton:hover {
 findbar toolbarbutton:active {
   transform: scale(0.92) !important;
 }
-
+}
 /* -------------------------- BOOKMARKS -------------------------- */
 
 /* Transparent Sidebar Items */
