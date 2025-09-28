@@ -1,3 +1,8 @@
+@import "arcline-pages/arcline-pages.css";
+
+
+
+/*---------------------------------transparent zen windows lie setting about config etc--------------------------------------*/
 :root{
   --zen-colors-tertiary: transparent !important;
   --zen-settings-secondary-background: transparent !important;
@@ -97,10 +102,9 @@ footer{
 
 
  /* transparency */
-/* .pdfViewer, body:has(.pdfViewer){
+.pdfViewer, body:has(.pdfViewer){
   background-color: transparent !important;
   background: none !important;
   border: none !important;
   box-shadow: none !important;
-} */
-
+} 
