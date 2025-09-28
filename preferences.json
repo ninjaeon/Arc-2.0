@@ -45,10 +45,7 @@
         "label": "Enable Tab Groups",
         "property": "browser.tabs.groups.enabled"
 
-    },
-    {
-        "type": "separator"
-    },
+    },    
     {
         "type": "checkbox",
         "property": "arc.urlbar.background",
@@ -198,10 +195,15 @@
         "label": "Disable audio playing indicator in tab playing media."
     },
     {
-        "type":"checkbox",
+        "type": "checkbox",
         "property": "arc.media-controls-toolbar-bottom",
         "label": "Enable Media Controls Toolbar to go bottom.",
         "default": false
+    },
+    {
+        "type": "checkbox",
+        "property": "arc-findbar-disable",
+        "label": "Disable Arc styling for FindBar (Must use this if you have installed Browse Bot Mod)."
     },
     {
         "type": "dropdown",
@@ -351,6 +353,7 @@
         ]
     }
 ]
+
 
 
 
