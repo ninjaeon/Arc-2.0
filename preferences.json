@@ -52,7 +52,7 @@
     {
         "type": "checkbox",
         "property": "arc.urlbar.background",
-        "label": "Enable blur for background zoom blur when URL bar popup."
+        "label": "Disable blur for background zoom blur when URL bar popup. (Only ENABLE it if you don't use Transparent background at all)"
     },
     {
         "type": "dropdown",
@@ -179,7 +179,7 @@
     {
         "type": "checkbox",
         "property": "arc-menu-animations",
-        "label": "Disable Menu Animations (Do it for using Context Menu Icon Mod)."
+        "label": "Disable Menu Animations."
     },
     {
         "type": "checkbox",
@@ -351,6 +351,7 @@
         ]
     }
 ]
+
 
 
 
