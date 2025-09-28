@@ -50,6 +50,11 @@
         "type": "separator"
     },
     {
+        "type": "checkbox",
+        "property": "arc.urlbar.background",
+        "label": "Enable blur for background zoom blur when URL bar popup."
+    },
+    {
         "type": "dropdown",
         "value": "number",
         "property": "arc-tab-loading-animation",
@@ -217,11 +222,6 @@
         ]
     },
     {
-        "type": "checkbox",
-        "property": "arc.urlbar.background",
-        "label": "Enable blur for website zoom background blur when URL bar popup."
-    },
-    {
         "type": "dropdown",
         "value": "number",
         "property": "arc-workspace-style",
@@ -351,6 +351,7 @@
         ]
     }
 ]
+
 
 
 
