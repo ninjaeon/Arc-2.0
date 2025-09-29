@@ -362,6 +362,11 @@
         "type": "checkbox",
         "property": "arc-compact-force-bg-on-sidebar",
         "label": "Force compact sidebar background whenever a sidebar is open (fallback for #59)."
+    },
+    {
+        "type": "checkbox",
+        "property": "arc-compact-keep-bg-always",
+        "label": "Force compact sidebar background always (last-resort fix for #59)."
     }
 ]
 

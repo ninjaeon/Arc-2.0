@@ -685,3 +685,20 @@ findbar toolbarbutton:active {
     }
   }
 }
+
+/* -------------------------- FORCE ALWAYS: Keep compact background regardless (#59) -------------------------- */
+@-moz-document url-prefix("chrome:") {
+  @media (-moz-pref("arc-compact-keep-bg-always")) {
+    #titlebar {
+      background: light-dark(rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0.4)) !important;
+      backdrop-filter: blur(var(--arc-compact-sidebar-blur, 30px)) saturate(140%) !important;
+      border-radius: 11px !important;
+      padding: 8px !important;
+    }
+    #browser::after { opacity: 1 !important; }
+
+    @media (-moz-pref("arc-compact-debug")) {
+      #titlebar { outline: 2px dashed magenta !important; outline-offset: -2px !important; }
+    }
+  }
+}
