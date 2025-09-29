@@ -357,6 +357,11 @@
         "type": "checkbox",
         "property": "arc-compact-debug",
         "label": "DEBUG: Highlight compact sidebar background fix (magenta outline)."
+    },
+    {
+        "type": "checkbox",
+        "property": "arc-compact-force-bg-on-sidebar",
+        "label": "Force compact sidebar background whenever a sidebar is open (fallback for #59)."
     }
 ]
 

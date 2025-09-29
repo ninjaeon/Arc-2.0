@@ -660,11 +660,28 @@ findbar toolbarbutton:active {
 
 /* -------------------------- FIX: Re-apply compact background when second sidebar visible (#59) -------------------------- */
 @-moz-document url-prefix("chrome:") {
-  body:has(#sidebar-box:not([hidden])):has([zen-compact-mode="true"]) #titlebar,
-  body:has(#sidebar-box:not([collapsed])):has([zen-compact-mode="true"]) #titlebar {
+  /* Primary: when Firefox main window exposes an active sidebar via [sidebarcommand] */
+  /* Limit to compact mode when detectable */
+  :root[sidebarcommand] html[zen-compact-mode="true"] #titlebar,
+  :root[sidebarcommand] body:has([zen-compact-mode="true"]) #titlebar {
     background: light-dark(rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0.4)) !important;
     backdrop-filter: blur(var(--arc-compact-sidebar-blur)) saturate(140%) !important;
     border-radius: 11px !important;
     padding: 8px !important;
+  }
+
+  /* Ensure overlay pseudo background is visible while a sidebar is active */
+  :root[sidebarcommand] #browser::after {
+    opacity: 1 !important;
+  }
+
+  /* Fallback: if compact detection is unreliable, allow forcing background whenever a sidebar is active */
+  @media (-moz-pref("arc-compact-force-bg-on-sidebar")) {
+    :root[sidebarcommand] #titlebar {
+      background: light-dark(rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0.4)) !important;
+      backdrop-filter: blur(var(--arc-compact-sidebar-blur)) saturate(140%) !important;
+      border-radius: 11px !important;
+      padding: 8px !important;
+    }
   }
 }
